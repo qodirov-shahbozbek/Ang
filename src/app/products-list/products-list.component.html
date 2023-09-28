@@ -1,0 +1,12 @@
+<section class="row">
+    <app-header (searchText)="searchProduct($event)"></app-header>
+    <ul>
+        <li *ngFor="let product of products " >
+            
+            <app-product-items  [model] = 'product' (deleteProduct)="deleteProduct(product)" (createProduct)="createProduct(productModel)"></app-product-items>
+        </li>
+    </ul>
+    <div>
+    </div>
+</section>
+    
