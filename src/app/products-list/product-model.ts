@@ -1,5 +1,5 @@
-export class ProductModel {
-    name!: string;
-    categoryId!: string;
-    photoPath!: string;
+export interface ProductModel {
+    name: string;
+    categoryId: any;
+    photoPath: string;
 }
