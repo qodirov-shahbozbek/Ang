@@ -14,7 +14,6 @@ export class ProductsListComponent implements OnInit {
   productModel!: ProductModel;
 
   constructor(private productListService: ProductListServiceService) {
-
   }
   ngOnInit() {
     this.reloadProductsList()
