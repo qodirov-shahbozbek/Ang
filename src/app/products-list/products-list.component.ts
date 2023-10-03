@@ -12,7 +12,7 @@ export class ProductsListComponent implements OnInit{
   productId!: string;
   searchText!: string;
   productModel!: ProductModel;
-
+  
 
   
   constructor(private productListService: ProductListServiceService){
@@ -50,7 +50,9 @@ export class ProductsListComponent implements OnInit{
     });
   }
 
-  createProduct(productModel: ProductModel){
+  createProducts(productModel:any){
+    console.log("1")
+    console.log(productModel)
     productModel.name = this.productModel.name;
     productModel.categoryId = this.productModel.categoryId;
     productModel.photoPath = this.productModel.photoPath;
@@ -59,5 +61,9 @@ export class ProductsListComponent implements OnInit{
         this.reloadProductsList();
       }
     })
+  }
+
+  newEmit(){
+    console.log("data")
   }
 }

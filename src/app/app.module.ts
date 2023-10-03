@@ -15,7 +15,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { ProductItemsComponent } from './product-items/product-items.component';
-
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -29,13 +29,18 @@ import { ProductItemsComponent } from './product-items/product-items.component';
     SignInComponent,
     HeaderComponent,
     HomeComponent,
-    ProductItemsComponent
+    ProductItemsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ButtonModule,
     FormsModule
+  ],
+  exports:[
+    ProductItemsComponent,
+    ProductsListComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
