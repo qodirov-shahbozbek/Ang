@@ -1,25 +1,29 @@
 <div class="card" style="width: 18rem;">
-    <img src="{{model.photoPath}}" class="card-img-top" alt="...">
+    <img src="{{model}}" class="card-img-top" alt="...">
     <div class="card-body">
-        <h1 class="card-id">{{model.Id}}</h1>
-        <h5 class="card-title">{{model.name}}</h5>
-        <p class="card-text">{{model.category}}</p>
+        <h1 class="card-id">{{model}}</h1>
+        <h5 class="card-title">{{model}}</h5>
+        <p class="card-text">{{model}}</p>
         <a href="a" class="btn btn-primary">Go somewhere</a>
     </div>
-    <button (click)="setDeleteValue(model.Id)" >Delete</button> 
+    <button (click)="setDeleteValue(model)" >Delete</button> 
 </div> 
 
 
-<button (click)="setCreateValue()">Add Product</button>
-<div class="input-group input-group-sm mb-3">
-    <span class="input-group-text" id="inputGroup-sizing-sm">Name: </span>
-    <input type="text" class="form-control" [(ngModel)]="createProductModel.name" [ngModelOptions]="{standalone: true}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-</div>
-<div class="input-group input-group-sm mb-3">
-    <span class="input-group-text" id="inputGroup-sizing-sm">CategoryId: </span>
-    <input type="text" class="form-control" [(ngModel)]="createProductModel.categoryId" [ngModelOptions]="{standalone: true}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-</div>
-<div class="input-group input-group-sm mb-3">
-    <span class="input-group-text" id="inputGroup-sizing-sm">Photo: </span>
-    <input type="text" class="form-control" [(ngModel)]="createProductModel.photoPath" [ngModelOptions]="{standalone: true}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+<button pButton pRipple label="Submit" (click)="setCreateValue()" class="p-button-success"></button>
+<!-- <p-button (click)="setCreateValue()"  styleClass="p-button-success">Add Product</p-button> -->
+<div style="background-color: aqua; margin: 2rem;" >
+
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Name: </span>
+        <input type="text" class="form-control" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    </div>
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">CategoryId: </span>
+        <input type="text" class="form-control" [(ngModel)]="categoryIds" [ngModelOptions]="{standalone: true}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    </div>
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Photo: </span>
+        <input type="text" class="form-control" [(ngModel)]="photoPath" [ngModelOptions]="{standalone: true}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    </div>
 </div>

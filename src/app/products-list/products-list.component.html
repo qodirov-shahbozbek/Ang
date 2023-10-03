@@ -1,12 +1,14 @@
-<section class="row">
+<!-- <section class="row">
     <app-header (searchText)="searchProduct($event)"></app-header>
     <ul>
-        <li *ngFor="let product of products " >
-            
-            <app-product-items  [model] = 'product' (deleteProduct)="deleteProduct(product)" (createProduct)="createProduct(productModel)"></app-product-items>
+        <li *ngFor="let product of products ">
+            <app-product-items [model]='product' (deleteProduct)="deleteProduct($event)"
+                (createProduct)="createProducts()"></app-product-items>
         </li>
     </ul>
     <div>
     </div>
-</section>
-    
+</section> -->
+<div class="card">
+    <app-product-items (createProduct)="createProducts($event)"></app-product-items>
+</div> 
